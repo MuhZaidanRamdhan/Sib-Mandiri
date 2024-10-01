@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/form.css" />
+    <title>Form Pemesanan Tiket Travel</title>
+    <style></style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 style="color: aqua; text-align: center">
+        Form Pemesanan Tiket Travel
+      </h1>
+      <form class="form-contoh" action="" method="POST">
+        <!-- nama lengkap -->
+        <label for="fullname">Fullname :</label>
+        <input
+          type="text"
+          id="fullname"
+          name="fullname"
+          required
+          minlength="5"
+          maxlength="50"
+          placeholder="input your full name"
+        />
+        <br /><br />
+
+        <!-- email -->
+        <label for="email">Email :</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          required
+          placeholder="input your email"
+        />
+        <br /><br />
+
+        <!-- phone -->
+        <label for="phone">Phone :</label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          required
+          placeholder="input your phone number"
+        />
+        <br /><br />
+
+        <!-- Rute -->
+        <label for="rute">Rute :</label>
+        <select name="rute" id="rute" required>
+          <option value="" selected disabled>--Choose rute--</option>
+          <option value="Jakarta - Bandung">Jakarta - Bandung</option>
+          <option value="Jakarta - Tasikmalaya">Jakarta - Tasikmalaya</option>
+          <option value="Jakarta - Sukabumi">Jakarta - Sukabumi</option>
+        </select>
+        <br /><br />
+
+        <!-- Date -->
+        <label for="departure-date">Departure Date :</label>
+        <input type="date" name="departure-date" id="departure-date" required />
+        <br /><br />
+
+        <!-- Time -->
+        <label for="departure-time">Departure Time :</label>
+        <select name="departure-time" id="departure-time" required>
+          <option value="07.00 AM">07.00 AM</option>
+          <option value="08.00 AM">08.00 AM</option>
+          <option value="09.00 AM">09.00 AM</option>
+        </select>
+        <br /><br />
+
+        <!-- Number of passengers -->
+        <label for="passenger">Passenger :</label>
+        <input type="number" min="1" id="passenger" name="passenger" required />
+        <br /><br />
+
+        <!--Payment methods -->
+        <label for="payment">Method payment :</label>
+        <select name="payment" id="payment" required>
+          <option value="" selected disabled>--Choose payment--</option>
+          <option value="transfer bank">Transfer bank</option>
+          <option value="Credit card">Credit card</option>
+          <option value="E-wallet">E-wallet</option>
+        </select>
+        <br /><br />
+
+        <!-- terms -->
+        <label for="terms"
+          ><input type="checkbox" name="terms" id="terms" required />Agreement
+          to terms and conditions</label
+        >
+        <br /><br />
+
+        <!-- submit -->
+        <button id="button" type="submit">Order Ticket</button>
+      </form>
+    </div>
+  </body>
+</html>
